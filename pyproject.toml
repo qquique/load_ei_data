@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "load_ei_data"
+version = "0.1.0"
+description = "load export import data from dbf"
+authors = ["qquique"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+dbf = "^0.99.1"
+peewee = "^3.14.10"
+psycopg2-binary = "^2.9.3"
+schedule = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+packages = [
+    { include = "load_ei_data" }
+]

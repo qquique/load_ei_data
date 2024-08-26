@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  load_ei_data:
+    image: load_ei_data:arm64
+    restart: on-failure
+    environment:
+      DATADIR: /data
+      POSTGRES_HOST: localhost
+      POSTGRES_DB: export_import
+      POSTGRES_USER: postgres
+      POSTGRES_PASS: postgres
+    volumes:
+      - /mnt/data/ei_data:/data
+    
